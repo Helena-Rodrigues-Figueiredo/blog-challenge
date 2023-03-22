@@ -1,8 +1,11 @@
+import BlogPosts from './pages/BlogPosts';
+import BlogProvider from './context/BlogProvider';
+
 function App() {
   return (
-    <div className="App">
-      Hello!
-    </div>
+    <BlogProvider>
+      <BlogPosts />
+    </BlogProvider>
   );
 }
 
