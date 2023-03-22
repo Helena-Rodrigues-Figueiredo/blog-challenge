@@ -1,8 +1,12 @@
-import PostsList from '../components/PostsList';
+import PostsList from '../components/PostsList/PostsList';
+import Header from '../components/Header/Header';
 
 function BlogPosts() {
   return (
-    <PostsList />
+    <>
+      <Header />
+      <PostsList />
+    </>
   );
 }
 
