@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import BlogContext from '../../context/BlogContext';
@@ -11,6 +11,8 @@ function PostDetails() {
   const [userDetail, setUserDetail] = useState();
 
   const { id } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchAllComments() {
@@ -40,8 +42,9 @@ function PostDetails() {
   }, []);
 
   return (
-    <div className={ styles.postDetail }>
-      {posts?.map((post) => post.id === +(id)
+    <>
+      <div className={ styles.postDetail }>
+        {posts?.map((post) => post.id === +(id)
       && (
         <div className={ styles.postContent } key={ post.id }>
           <div>
@@ -65,16 +68,24 @@ function PostDetails() {
           </div>
         </div>
       ))}
-      <div className={ styles.postComments }>
-        <h2>Comments</h2>
-        {comments?.map((comment) => (
-          <div className={ styles.postComment } key={ comment.id }>
-            <h3>{comment.name}</h3>
-            <p>{comment.body}</p>
-          </div>
-        ))}
+        <div className={ styles.postComments }>
+          <h2>Comments</h2>
+          {comments?.map((comment) => (
+            <div className={ styles.postComment } key={ comment.id }>
+              <h3>{comment.name}</h3>
+              <p>{comment.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <button
+        className={ styles.backButton }
+        onClick={ (() => navigate('/')) }
+      >
+        Voltar
+
+      </button>
+    </>
   );
 }
 

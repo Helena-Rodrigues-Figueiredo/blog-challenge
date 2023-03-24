@@ -1,67 +1,84 @@
 .postDetail {
-    width: 80%;
-    margin: 1% auto;
-    height: 65vh;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    opacity: 0.8;
+  width: 80%;
+  margin: 0 auto;
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  opacity: 0.8;
 }
 
-.postComments, .postContent {
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 15px;
-    width: 50%;
+.postComments,
+.postContent {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 15px;
+  width: 50%;
 }
 
 .postContent {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.postContent div:first-child{
-    width: 70%;
+.postContent div:first-child {
+  width: 70%;
 }
 
 .postContent h2 {
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: #b11b20;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #b11b20;
 }
 
 .postContent div:first-child p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .postContent span {
-    font-weight: bold;
-    margin-right: 0.3rem;
+  font-weight: bold;
+  margin-right: 0.3rem;
 }
 
 .postComments {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow: auto;
 }
 
 .postComments h2 {
-    font-size: 30px;
-    text-align: center;
-    color: #b11b20;
-    margin-bottom: 2rem;
+  font-size: 30px;
+  text-align: center;
+  color: #b11b20;
+  margin-bottom: 2rem;
 }
 
 .postComments div {
-    margin-bottom: 1rem;
-    border-bottom: 1px dotted grey;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted grey;
 }
 
 .postComments div p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
+.backButton {
+  background-color: #b11b20;
+  color: white;
+  width: 10%;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
