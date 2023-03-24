@@ -1,59 +1,99 @@
- .postsContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2% 0;
+.postsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2% 0;
 }
 
 .postLink {
-    width: 20%; 
-    height: 30rem; 
-    background-color: #fafffd;
-    padding: 15px; 
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    cursor: pointer; 
-    text-decoration: none;
-    color: black;
+  width: 20%;
+  height: 30rem;
+  background-color: #fafffd;
+  padding: 15px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
-
 .postLink:hover {
-    border: 1px solid #b11b20;
-    box-shadow: 5px 5px 20px #b11b20;
+  border: 1px solid #b11b20;
+  box-shadow: 5px 5px 20px #b11b20;
 }
 
 .postLink:visited {
-    color: black;
+  color: black;
 }
 
 .postLink:hover .title {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .title {
-    font-size: 1.6rem;
-    color: #b11b20;
-    font-weight: 600;
+  font-size: 1.6rem;
+  color: #b11b20;
+  font-weight: 600;
 }
 
 .profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .profileImg {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #b11b20;
-    margin-right: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #b11b20;
+  margin-right: 1rem;
+}
+
+@media (max-width: 1201px) {
+  .postsContainer {
+    gap: 1.5rem;
+  }
+
+  .postLink {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .postsContainer {
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .postLink {
+    width: 45%;
+  }
+}
+
+@media (max-width: 481px) {
+  .postsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .postLink {
+    width: 85%;
+  }
 }
