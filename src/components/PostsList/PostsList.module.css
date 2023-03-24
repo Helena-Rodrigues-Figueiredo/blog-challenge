@@ -1,4 +1,4 @@
-.postsContainer {
+ .postsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -7,26 +7,33 @@
     margin: 2% 0;
 }
 
-.postDiv {
-    width: 20%;
-    height: 30rem;
+.postLink {
+    width: 20%; 
+    height: 30rem; 
     background-color: #fafffd;
-    box-shadow: 0 6px 14px;
-    padding: 15px;
+    padding: 15px; 
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    cursor: pointer;
+    cursor: pointer; 
+    text-decoration: none;
+    color: black;
 }
 
-.postDiv:hover {
-    border: 4px solid #b11b20;
+
+.postLink:hover {
+    border: 1px solid #b11b20;
+    box-shadow: 5px 5px 20px #b11b20;
 }
 
-.postDiv:hover .title {
+.postLink:visited {
+    color: black;
+}
+
+.postLink:hover .title {
     text-decoration: underline;
 }
 

@@ -7,9 +7,7 @@ import BlogContext from './BlogContext';
 
 function BlogProvider({ children }) {
   const [posts, setPosts] = useState([]);
-  const [comments, setComments] = useState([]);
   const [users, setUsers] = useState([]);
-  const [userDetails, setUserDetails] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -25,35 +23,9 @@ function BlogProvider({ children }) {
     fetchData();
   });
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data));
-
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((data) => setPosts(data));
-  }, []);
-
-  const fetchPostComments = async (postId) => {
-    const fetchComments = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
-    const allComments = fetchComments.data;
-    setComments(allComments);
-  };
-
-  const fetchUserDetails = async (userId) => {
-    const fetchDetails = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
-    const allDetails = fetchDetails.data;
-    setUserDetails(allDetails);
-  };
-
   const valueContext = {
     posts,
     users,
-    fetchPostComments,
-    comments,
-    fetchUserDetails,
-    userDetails,
   };
 
   return (
