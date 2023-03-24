@@ -1,11 +1,51 @@
 header {
-  height: 15rem;
+  height: 12vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header .title {
-    font-size: 3rem;
-    color: white;
+  font-size: 2.5vw;
+  color: white;
+}
+
+@media (max-width: 1201px) {
+  header {
+    height: 15vw;
+  }
+
+  header .title {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    height: 22vw;
+  }
+
+  header .title {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 769px) {
+  header {
+    height: 25vw;
+  }
+
+  header .title {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 481px) {
+  header {
+    height: 35vw;
+  }
+
+  header .title {
+    font-size: 7vw;
+  }
 }

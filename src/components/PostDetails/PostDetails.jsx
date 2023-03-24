@@ -78,13 +78,15 @@ function PostDetails() {
           ))}
         </div>
       </div>
-      <button
-        className={ styles.backButton }
-        onClick={ (() => navigate('/')) }
-      >
-        Voltar
+      <div className={ styles.btnDiv }>
+        <button
+          className={ styles.backButton }
+          onClick={ (() => navigate('/')) }
+        >
+          Voltar
 
-      </button>
+        </button>
+      </div>
     </>
   );
 }

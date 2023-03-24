@@ -1,7 +1,7 @@
 .postDetail {
   width: 80%;
   margin: 0 auto;
-  height: 60vh;
+  height: 65vh;
   display: flex;
   justify-content: space-around;
   gap: 1rem;
@@ -12,7 +12,7 @@
 .postContent {
   background-color: white;
   border-radius: 0.5rem;
-  padding: 15px;
+  padding: 1rem;
   width: 50%;
 }
 
@@ -25,17 +25,21 @@
 }
 
 .postContent div:first-child {
-  width: 70%;
+  width: 80%;
 }
 
 .postContent h2 {
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
+  margin-bottom: 1vw;
+  font-size: 2vw;
   color: #b11b20;
 }
 
 .postContent div:first-child p {
-  font-size: 1.2rem;
+  font-size: 1vw;
+}
+
+.postContent div:last-child p {
+  font-size: 0.8vw;
 }
 
 .postContent span {
@@ -51,19 +55,30 @@
 }
 
 .postComments h2 {
-  font-size: 30px;
+  font-size: 2vw;
   text-align: center;
   color: #b11b20;
-  margin-bottom: 2rem;
+  margin-bottom: 1vw;
 }
 
 .postComments div {
-  margin-bottom: 1rem;
+  margin-bottom: 1vw;
   border-bottom: 1px dotted grey;
+}
+
+.postComments div h3 {
+  font-size: 1vw;
 }
 
 .postComments div p {
   margin-bottom: 1rem;
+  font-size: 0.8vw;
+}
+
+.btnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .backButton {
@@ -71,14 +86,165 @@
   color: white;
   width: 10%;
   height: 2.5rem;
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 20px;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   opacity: 0.9;
+  margin: 2rem auto 1rem;
+}
+
+@media (max-width: 1201px) {
+  .postContent h2 {
+    font-size: 2.5vw;
+  }
+
+  .postContent div:first-child p {
+    font-size: 1.5vw;
+  }
+
+  .postContent div:last-child p {
+    font-size: 1.2vw;
+  }
+
+  .postComments div h3 {
+    font-size: 1.2vw;
+  }
+
+  .postComments div p {
+    margin-bottom: 1rem;
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .postDetail {
+    width: 90%;
+  }
+
+  .postComments,
+  .postContent {
+    width: 60%;
+  }
+
+  .postContent h2 {
+    font-size: 2.5vw;
+  }
+
+  .postContent div:first-child p {
+    font-size: 1.5vw;
+  }
+
+  .postContent div:last-child p {
+    font-size: 1.2vw;
+  }
+
+  .postComments h2 {
+    font-size: 2.5vw;
+  }
+
+  .postComments div h3 {
+    font-size: 1.8vw;
+  }
+
+  .postComments div p {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .postDetail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .postComments,
+    .postContent {
+      width: 90%;
+      min-height: 60vw;
+    }
+
+    .postContent div:first-child {
+      width: 100%;
+    }
+
+    .postContent h2 {
+      font-size: 3.5vw;
+    }
+
+    .postContent div:first-child p {
+      font-size: 2vw;
+    }
+
+    .postContent div:last-child p {
+      font-size: 1.6vw;
+    }
+
+    .postComments h2 {
+      font-size: 3.5vw;
+    }
+
+    .postComments div h3 {
+      font-size: 2vw;
+    }
+
+    .postComments div p {
+      font-size: 1.5vw;
+    }
+
+    .backButton {
+      width: 30%;
+      height: 2rem;
+      font-size: 2vh;
+    }
+  }
+}
+
+@media (max-width: 481px) {
+  .postDetail {
+    width: 95%;
+    height: 70vh;
+  }
+
+  .postComments,
+  .postContent {
+    width: 90%;
+    min-height: 60vw;
+  }
+
+  .postContent div:first-child {
+    width: 100%;
+  }
+
+  .postContent h2 {
+    font-size: 6vw;
+  }
+
+  .postContent div:first-child p {
+    font-size: 3.5vw;
+  }
+
+  .postContent div:last-child p {
+    font-size: 3vw;
+  }
+
+  .postComments h2 {
+    font-size: 6vw;
+  }
+
+  .postComments div h3 {
+    font-size: 3vw;
+  }
+
+  .postComments div p {
+    font-size: 3vw;
+  }
+
+  .backButton {
+    width: 30%;
+    height: 2rem;
+  }
 }
