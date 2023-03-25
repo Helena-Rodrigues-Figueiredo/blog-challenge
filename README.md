@@ -26,7 +26,13 @@ git clone git@github.com:Helena-Rodrigues-Figueiredo/blog-challenge.git
 cd blog-challenge
 ```
 
-### 3. Para rodar a aplicação localmente digite:
+### 3. Instale as dependências:
+```
+npm install
+```
+
+
+### 4. Para rodar a aplicação localmente digite:
 ```
 npm start
 ```
